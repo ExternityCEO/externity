@@ -27,7 +27,7 @@ contract SafeMath {
 contract Externity is ERC20Interface, SafeMath {
     string public name;
     string public symbol;
-    uint8 public decimals; // 18 decimals is the strongly suggested default, avoid changing it
+    uint8 public decimals;
 
     uint256 public _totalSupply;
 
