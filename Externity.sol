@@ -1,13 +1,5 @@
-/**
- *Submitted for verification at BscScan.com on 2021-05-10
-*/
-
 pragma solidity ^0.5.0;
 
-// ----------------------------------------------------------------------------
-// ERC Token Standard #20 Interface
-//
-// ----------------------------------------------------------------------------
 contract ERC20Interface {
     function totalSupply() public view returns (uint);
     function balanceOf(address tokenOwner) public view returns (uint balance);
@@ -20,9 +12,6 @@ contract ERC20Interface {
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
 
-// ----------------------------------------------------------------------------
-// Safe Math Library
-// ----------------------------------------------------------------------------
 contract SafeMath {
     function safeAdd(uint a, uint b) public pure returns (uint c) {
         c = a + b;
@@ -45,11 +34,6 @@ contract Externity is ERC20Interface, SafeMath {
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
 
-    /**
-     * Constrctor function
-     *
-     * Initializes contract with initial supply tokens to the creator of the contract
-     */
     constructor() public {
         name = "Externity";
         symbol = "EXY";
